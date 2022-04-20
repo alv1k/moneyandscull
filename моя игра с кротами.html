@@ -12,10 +12,17 @@
 			background-image: url(nora.webp);
 			background-size: 100% 100%;
 		}
+		.bg {
+			position: absolute;
+			height: 800px;
+			width: 800px;
+			background-image: url(bg.webp);
+			background-size: 100% 100%;
+		}
 		.mole{
 			position: absolute;
-			height: 50px;
-			width: 50px;
+			height: 80px;
+			width: 80px;
 			transition: 1s;
 			background-size: 100% 100%;
 		}
@@ -47,7 +54,6 @@
 <div class=" prop" style="top: 500px; left: 500px"></div>
 <div class=" prop " style="top: 500px; left: 700px"></div>
 <div class=" prop" style="top: 500px; left: 900px"></div>
-
 <div class="wellness">
 	<h3>Денег хватит на:<br>
 		<div class="goods" >
@@ -123,8 +129,8 @@ let createMole = function(){
 	document.body.appendChild(mole);
 	prop[indexBefore].before(mole);
 	mole.classList.add("mole");
-	mole.style.top = prop[indexBefore].top + 20 + "px"
-	mole.style.left = prop[indexBefore].left + 50 + "px";
+	mole.style.top = prop[indexBefore].top + 10 + "px"
+	mole.style.left = prop[indexBefore].left + 70 + "px";
 	mole.name = moleName[randomizer(1)];
 	if(mole.name == "good"){
 		mole.style.backgroundImage= "url(" + moleUrl[0] + ")"
@@ -136,7 +142,7 @@ let createMole = function(){
 	}
 	setTimeout(show, 1000)
 	let hide = function(){
-		mole.style.top = prop[indexBefore].top + 30 + "px"
+		mole.style.top = prop[indexBefore].top + 10  + "px"
 		//mole.style.display = "none"
 	}
 	setTimeout(hide, 3000)
